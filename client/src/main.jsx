@@ -5,8 +5,10 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import App from "./App";
-import Record from "./components/Record";
-import RecordList from "./components/RecordList";
+import AboutUs from "./components/AboutUs";
+import Events from "./components/Events";
+import BioBlog from "./components/BioBlog";
+import GetInvolved from "./components/GetInvolved";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -16,27 +18,19 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <RecordList />,
+        element: <AboutUs />,
       },
-    ],
-  },
-  {
-    path: "/edit/:id",
-    element: <App />,
-    children: [
       {
-        path: "/edit/:id",
-        element: <Record />,
+        path: "/events",
+        element: <Events />,
       },
-    ],
-  },
-  {
-    path: "/create",
-    element: <App />,
-    children: [
       {
-        path: "/create",
-        element: <Record />,
+        path: "/bioblog",
+        element: <BioBlog />,
+      },
+      {
+        path: "/getinvolved",
+        element: <GetInvolved />,
       },
     ],
   },

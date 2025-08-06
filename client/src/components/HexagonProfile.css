@@ -1,0 +1,63 @@
+.profile-container {
+  width: 200px;
+  text-align: center;
+  font-family: sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.profile-container:hover {
+  transform: scale(1.1);
+}
+
+.hexagon {
+  width: 100%;
+  aspect-ratio: 1;
+  clip-path: polygon(
+    50% 0%, 
+    93% 25%, 
+    93% 75%, 
+    50% 100%, 
+    7% 75%, 
+    7% 25%
+  );
+  overflow: hidden;
+  background-color: #226897;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.hexagon-image {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  display: block;
+  margin: 5%;
+  clip-path: polygon(
+    50% 0%, 
+    93% 25%, 
+    93% 75%, 
+    50% 100%, 
+    7% 75%, 
+    7% 25%
+  );
+}
+
+.profile-name {
+  margin-top: 8px;
+  background-color: #226897; /* Tailwind's slate-100 */
+  padding: 0.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 300;
+  color: white;
+  font-family: "Quicksand";
+  text-align: center;
+}
+
+.profile-name .job-title {
+  margin-top: 4px;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #e0e0e0;
+  font-family: "Quicksand";
+}
