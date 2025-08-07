@@ -1,6 +1,14 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
+import dotenv from 'dotenv';
+dotenv.config();
 
-const uri = process.env.ATLAS_URI || "";
+const uri = process.env.ATLAS_URI;
+
+if (!uri) {
+  console.error("ATLAS_URI environment variable is not set");
+  process.exit(1);
+}
+
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -18,7 +26,8 @@ try {
    "Pinged your deployment. You successfully connected to MongoDB!"
   );
 } catch(err) {
-  console.error(err);
+  console.error("Failed to connect to MongoDB:", err);
+  process.exit(1);
 }
 
 let db = client.db("bioinnovate-blogs");

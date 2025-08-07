@@ -9,6 +9,9 @@ import AboutUs from "./components/AboutUs";
 import Events from "./components/Events";
 import BioBlog from "./components/BioBlog";
 import GetInvolved from "./components/GetInvolved";
+import AdminLogin from "./components/AdminLogin";
+import AdminDashboard from "./components/AdminDashboard";
+import ProtectedRoute from "./components/ProtectedRoute";
 import "./index.css";
 
 const router = createBrowserRouter([
@@ -33,6 +36,18 @@ const router = createBrowserRouter([
         element: <GetInvolved />,
       },
     ],
+  },
+  {
+    path: "/admin",
+    element: <AdminLogin />,
+  },
+  {
+    path: "/dashboard",
+    element: (
+      <ProtectedRoute>
+        <AdminDashboard />
+      </ProtectedRoute>
+    ),
   },
 ]);
 

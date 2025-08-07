@@ -1,9 +1,13 @@
+import dotenv from 'dotenv';
+dotenv.config();
+
 import express from "express";
 import cors from "cors";
 import path from "path";
 import { fileURLToPath } from "url";
-import records from "./routes/record.js";
 import upload from "./routes/upload.js";
+import blogs from "./routes/blogs.js";
+import events from "./routes/events.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -17,8 +21,9 @@ app.use(express.json());
 // Serve static files from uploads directory
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-app.use("/record", records);
 app.use("/upload", upload);
+app.use("/api/blogs", blogs);
+app.use("/api/events", events);
 
 // start the Express server
 app.listen(PORT, () => {
