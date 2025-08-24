@@ -8,6 +8,7 @@ import App from "./App";
 import AboutUs from "./components/AboutUs";
 import Events from "./components/Events";
 import BioBlog from "./components/BioBlog";
+import BlogView from "./components/BlogView";
 import GetInvolved from "./components/GetInvolved";
 import AdminLogin from "./components/AdminLogin";
 import AdminDashboard from "./components/AdminDashboard";
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/bioblog",
         element: <BioBlog />,
+      },
+      {
+        path: "/blog/:id",
+        element: <BlogView />,
       },
       {
         path: "/getinvolved",

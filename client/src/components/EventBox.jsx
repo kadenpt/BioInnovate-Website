@@ -1,67 +1,92 @@
 import { useState } from 'react';
 
-export default function EventBox({name, date, time, location, description}) {
-    const [isHovered, setIsHovered] = useState(false);
+export default function EventBox({ event }) {
+  const [isHovered, setIsHovered] = useState(false);
 
-    return (
-        <div 
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            border: "1px solid #226897",
-            width: "300px",
-            height: "200px",
-            padding: "1rem",
-            margin: "1rem",
-            borderRadius: "8px",
-            boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-            backgroundColor: isHovered ? "#226897" : "white",
-            transition: "all 0.3s ease",
-            cursor: "pointer"
-          }}
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-            <h1 style={{
-              fontFamily: "quicksand, sans-serif",
-              color: isHovered ? "white" : "#226897",
-              fontSize: "1.5rem",
+  return (
+    <div
+      style={{
+        width: "300px",
+        height: "200px",
+        padding: "20px",
+        margin: "10px",
+        backgroundColor: isHovered ? "#68adc4" : "white",
+        color: isHovered ? "white" : "#226897",
+        borderRadius: "10px",
+        boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
+        transition: "all 0.3s ease",
+        transform: isHovered ? "scale(1.02)" : "scale(1)",
+        cursor: "pointer",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        border: `3px solid #68adc4`
+      }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div>
+        <h3 style={{ 
+          margin: "0 0 10px 0", 
+          fontSize: "1.2rem",
+          fontWeight: "bold"
+        }}>
+          {event.name}
+        </h3>
+        <p style={{ 
+          margin: "5px 0", 
+          fontSize: "0.9rem",
+          opacity: 0.8
+        }}>
+          📅 {event.date} at {event.time}
+        </p>
+        <p style={{ 
+          margin: "5px 0", 
+          fontSize: "0.9rem",
+          opacity: 0.8
+        }}>
+          📍 {event.location}
+        </p>
+        <p style={{
+          margin: "10px 0",
+          fontSize: "0.85rem",
+          lineHeight: "1.4",
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+          display: "-webkit-box",
+          WebkitLineClamp: 3,
+          WebkitBoxOrient: "vertical"
+        }}>
+          {event.description}
+        </p>
+      </div>
+      
+      {event.url && (
+        <div style={{ marginTop: "auto" }}>
+          <a
+            href={event.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-block",
+              backgroundColor: isHovered ? "white" : "#68adc4",
+              color: isHovered ? "#68adc4" : "white",
+              padding: "8px 16px",
+              borderRadius: "6px",
+              textDecoration: "none",
+              fontSize: "0.85rem",
+              fontWeight: "600",
               textAlign: "center",
-              transition: "color 0.3s ease"
-            }}>{name}</h1>
-            <p style={{
-              fontFamily: "anton, sans-serif",
-              color: isHovered ? "white" : "#226897",
-              fontSize: "0.9rem",
-              transition: "color 0.3s ease"
-            }}>{date}</p>
-            <p style={{
-              fontFamily: "anton, sans-serif",
-              color: isHovered ? "white" : "#226897",
-              fontSize: "0.9rem",
-              transition: "color 0.3s ease"
-            }}>{time}</p>
-            <p style={{
-              fontFamily: "quicksand, sans-serif",
-              fontSize: "0.8rem",
-              color: isHovered ? "white" : "black",
-              transition: "color 0.3s ease"
-            }}>{location}</p>
-            <p style={{
-              fontFamily: "quicksand, sans-serif",
-              fontSize: "0.8rem",
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-              display: "-webkit-box",
-              WebkitLineClamp: 3,
-              WebkitBoxOrient: "vertical",
-              textAlign: "center",
-              lineHeight: "1.3",
-              color: isHovered ? "white" : "black",
-              transition: "color 0.3s ease"
-            }}>{description}</p>
+              width: "100%",
+              transition: "all 0.3s ease",
+              border: `2px solid ${isHovered ? "white" : "#68adc4"}`
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            RSVP
+          </a>
         </div>
-    )
+      )}
+    </div>
+  );
 }

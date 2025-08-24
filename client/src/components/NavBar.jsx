@@ -1,9 +1,10 @@
 import { NavLink } from "react-router-dom";
+import logo from "../../assets/logo.jpg";
 
 export default function Navbar() {
   return (
     <div style={{ 
-      backgroundColor: "#b0d5df", 
+      backgroundColor: "white", 
       position: "fixed", 
       top: 0, 
       left: 0, 
@@ -17,6 +18,28 @@ export default function Navbar() {
         alignItems: "center",
         width: "100%"
       }}>
+        <div style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "15px"
+        }}>
+          <img 
+            src={logo} 
+            alt="BioInnovate Logo" 
+            style={{
+              height: "70px",
+              width: "auto",
+              borderRadius: "4px"
+            }}
+          />
+          <h1 style={{
+            color:"#226897",
+            fontFamily: "Anton",
+            fontSize: "40px",
+            fontWeight: "bold",
+            margin: "0"
+          }}>BioInnovate UBC</h1>
+        </div>
         <NavLink to="/"  style={{
           fontFamily: "Quicksand",
           fontSize: "16px",
@@ -31,14 +54,6 @@ export default function Navbar() {
         }}>
           EVENTS
         </NavLink>
-        <h1 style={{
-          color:"#226897",
-          fontFamily: "Anton",
-          fontSize: "40px",
-          fontWeight: "bold",
-          textAlign: "center",
-          margin: "0"
-        }}>BioInnovate UBC</h1>
         <NavLink to="/bioblog" style={{
           fontFamily: "Quicksand",
           fontSize: "16px",

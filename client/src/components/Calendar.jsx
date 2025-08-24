@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function Calendar() {
+export default function Calendar({ events = [] }) {
   const [currentDate, setCurrentDate] = useState(new Date());
   
   const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -38,6 +38,22 @@ export default function Calendar() {
 
   const goToNextMonth = () => {
     setCurrentDate(new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1));
+  };
+
+  // Check if a specific day has events
+  const getEventsForDay = (day) => {
+    if (!day) return [];
+    
+    const currentYear = currentDate.getFullYear();
+    const currentMonth = currentDate.getMonth();
+    const dayDate = new Date(currentYear, currentMonth, day);
+    
+    return events.filter(event => {
+      const eventDate = new Date(event.date);
+      return eventDate.getDate() === day && 
+             eventDate.getMonth() === currentMonth && 
+             eventDate.getFullYear() === currentYear;
+    });
   };
 
   const days = getDaysInMonth(currentDate);
@@ -122,36 +138,100 @@ export default function Calendar() {
         gridTemplateColumns: "repeat(7, 1fr)",
         gap: "4px"
       }}>
-        {days.map((day, index) => (
-          <div 
-            key={index}
-            style={{
-              aspectRatio: "1",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontFamily: "Quicksand, sans-serif",
-              fontSize: "0.9rem",
-              color: day ? "#333" : "transparent",
-              backgroundColor: day ? "#f8f9fa" : "transparent",
-              borderRadius: "4px",
-              cursor: day ? "pointer" : "default",
-              border: day ? "1px solid #e9ecef" : "none"
-            }}
-            onMouseEnter={(e) => {
-              if (day) {
-                e.target.style.backgroundColor = "#e3f2fd";
-              }
-            }}
-            onMouseLeave={(e) => {
-              if (day) {
-                e.target.style.backgroundColor = "#f8f9fa";
-              }
-            }}
-          >
-            {day}
-          </div>
-        ))}
+        {days.map((day, index) => {
+          const dayEvents = getEventsForDay(day);
+          const hasEvents = dayEvents.length > 0;
+          
+          return (
+            <div 
+              key={index}
+              style={{
+                aspectRatio: "1",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "flex-start",
+                fontFamily: "Quicksand, sans-serif",
+                fontSize: "0.9rem",
+                color: day ? "#333" : "transparent",
+                backgroundColor: day ? (hasEvents ? "#e3f2fd" : "#f8f9fa") : "transparent",
+                borderRadius: "4px",
+                cursor: day ? "pointer" : "default",
+                border: day ? `1px solid ${hasEvents ? "#226897" : "#e9ecef"}` : "none",
+                position: "relative",
+                padding: "4px",
+                overflow: "hidden"
+              }}
+              onMouseEnter={(e) => {
+                if (day) {
+                  e.target.style.backgroundColor = hasEvents ? "#bbdefb" : "#e3f2fd";
+                }
+              }}
+              onMouseLeave={(e) => {
+                if (day) {
+                  e.target.style.backgroundColor = hasEvents ? "#e3f2fd" : "#f8f9fa";
+                }
+              }}
+            >
+              <span style={{ 
+                marginBottom: "4px", 
+                fontWeight: "bold",
+                fontSize: "1rem"
+              }}>
+                {day}
+              </span>
+              
+              {hasEvents && (
+                <div style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "2px",
+                  width: "100%",
+                  alignItems: "center"
+                }}>
+                  {dayEvents.slice(0, 2).map((event, eventIndex) => (
+                    <div
+                      key={eventIndex}
+                      style={{
+                        backgroundColor: "#226897",
+                        color: "white",
+                        padding: "2px 4px",
+                        borderRadius: "3px",
+                        fontSize: "0.7rem",
+                        fontFamily: "Quicksand, sans-serif",
+                        fontWeight: "500",
+                        textAlign: "center",
+                        width: "90%",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        whiteSpace: "nowrap",
+                        lineHeight: "1.2"
+                      }}
+                      title={`${event.name} at ${event.time}`}
+                    >
+                      {event.name}
+                    </div>
+                  ))}
+                  {dayEvents.length > 2 && (
+                    <div style={{
+                      backgroundColor: "#226897",
+                      color: "white",
+                      padding: "2px 4px",
+                      borderRadius: "3px",
+                      fontSize: "0.7rem",
+                      fontFamily: "Quicksand, sans-serif",
+                      fontWeight: "500",
+                      textAlign: "center",
+                      width: "90%"
+                    }}>
+                      +{dayEvents.length - 2} more
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

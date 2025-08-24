@@ -1,177 +1,327 @@
+import React, { useState } from 'react';
+import { emailAPI } from '../services/api.js';
+import homeBackground from '../../assets/homeBackground.JPG';
+import tempBackground from '../../assets/tempBackground.png';
+
 export default function GetInvolved() {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState('');
+  const [messageType, setMessageType] = useState('');
+
+  const handleEmailSubmit = async (e) => {
+    e.preventDefault();
+    
+    if (!email.trim()) {
+      setMessage('Please enter a valid email address');
+      setMessageType('error');
+      return;
+    }
+
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setMessage('Please enter a valid email address');
+      setMessageType('error');
+      return;
+    }
+
+    setIsSubmitting(true);
+    setMessage('');
+
+    try {
+      await emailAPI.subscribe(email);
+      setMessage('Successfully subscribed to our mailing list!');
+      setMessageType('success');
+      setEmail('');
+    } catch (error) {
+      if (error.message.includes('already subscribed')) {
+        setMessage('This email is already subscribed to our mailing list.');
+        setMessageType('info');
+      } else {
+        setMessage('Failed to subscribe. Please try again.');
+        setMessageType('error');
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
-    <div className="pt-20 px-6">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-800 mb-8">Get Involved</h1>
-        
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {/* Join as Student */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-semibold mb-6 inline-block">
-              For Students
-            </div>
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Join Our Community</h2>
-            <p className="text-gray-600 mb-6">
-              Connect with like-minded students, gain hands-on experience, and develop 
-              your skills in biotechnology and innovation.
-            </p>
-            <ul className="space-y-3 mb-6">
-              <li className="flex items-center text-gray-600">
-                <span className="text-green-500 mr-3">✓</span>
-                Access to exclusive workshops and training
-              </li>
-              <li className="flex items-center text-gray-600">
-                <span className="text-green-500 mr-3">✓</span>
-                Mentorship from industry professionals
-              </li>
-              <li className="flex items-center text-gray-600">
-                <span className="text-green-500 mr-3">✓</span>
-                Research project opportunities
-              </li>
-              <li className="flex items-center text-gray-600">
-                <span className="text-green-500 mr-3">✓</span>
-                Networking events and career guidance
-              </li>
-            </ul>
-            <button className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
-              Join as Student
-            </button>
-          </div>
-
-          {/* Join as Professional */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <div className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-6 inline-block">
-              For Professionals
-            </div>
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">Mentor & Collaborate</h2>
-            <p className="text-gray-600 mb-6">
-              Share your expertise, mentor the next generation, and collaborate on 
-              innovative biotech projects.
-            </p>
-            <ul className="space-y-3 mb-6">
-              <li className="flex items-center text-gray-600">
-                <span className="text-green-500 mr-3">✓</span>
-                Mentor talented students
-              </li>
-              <li className="flex items-center text-gray-600">
-                <span className="text-green-500 mr-3">✓</span>
-                Access to cutting-edge research
-              </li>
-              <li className="flex items-center text-gray-600">
-                <span className="text-green-500 mr-3">✓</span>
-                Industry-academia partnerships
-              </li>
-              <li className="flex items-center text-gray-600">
-                <span className="text-green-500 mr-3">✓</span>
-                Speaking and workshop opportunities
-              </li>
-            </ul>
-            <button className="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors">
-              Join as Professional
-            </button>
-          </div>
-        </div>
-
-        {/* Volunteer Opportunities */}
-        <div className="bg-white rounded-lg shadow-lg p-8 mb-12">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">Volunteer Opportunities</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center p-6 border border-gray-200 rounded-lg">
-              <div className="bg-purple-100 text-purple-800 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-xl">🎯</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Event Planning</h3>
-              <p className="text-gray-600 text-sm">
-                Help organize workshops, conferences, and networking events.
+    <div style={{
+      position: "relative",
+      minHeight: "100vh",
+      width: "100%"
+    }}>
+      {/* Base Background Layer - homeBackground.JPG */}
+      <div style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100vw",
+        height: "100vh",
+        backgroundImage: `url(${homeBackground})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        zIndex: -2
+      }} />
+      
+      {/* Overlay Layer - tempBackground.png */}
+      <div style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100vw",
+        height: "100vh",
+        backgroundImage: `url(${tempBackground})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        zIndex: -1,
+        opacity: 0.7
+      }} />
+      
+      {/* Original Content - Unchanged */}
+      <div style={{
+        position: "relative",
+        zIndex: 1,
+        paddingTop: "6rem",
+        paddingBottom: "2rem"
+      }}>
+        <div style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          padding: "0 2rem"
+        }}>
+          <h1 style={{
+            fontFamily: "Anton, sans-serif",
+            fontSize: "4rem",
+            textAlign: "center",
+            marginBottom: "2rem",
+            color: "#226897"
+          }}>
+            How to Get Involved
+          </h1>
+          
+          <p style={{
+            fontFamily: "Quicksand, sans-serif",
+            fontSize: "1.5rem",
+            textAlign: "center",
+            marginBottom: "3rem",
+            color: "#226897",
+            maxWidth: "800px",
+            marginLeft: "auto",
+            marginRight: "auto",
+            lineHeight: "1.6"
+          }}>
+            BioInnovate UBC is inclusive, welcoming members from multiple faculties to contribute to our mission, whether through executive roles or general membership. Our comprehensive hiring process begins in September each year, aiming to equip our team with diverse skills—from financial management to marketing—necessary to propel our initiatives forward. The BioInnovate UBC executive team features individuals with a passion for biotechnology and life sciences, holding a wide breadth of skills, culminating to provide extensive professional work of all facets.
+          </p>
+          
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
+            gap: "2rem",
+            marginBottom: "3rem"
+          }}>
+            <div style={{
+              backgroundColor: "rgba(255, 255, 255, 0.95)",
+              padding: "2rem",
+              borderRadius: "12px",
+              textAlign: "center",
+              backdropFilter: "blur(10px)",
+              border: "2px solid rgba(255,255,255,0.2)",
+              boxShadow: "0 8px 32px rgba(0,0,0,0.3)"
+            }}>
+              <h3 style={{
+                fontFamily: "Anton, sans-serif",
+                fontSize: "2rem",
+                marginBottom: "1rem",
+                color: "#226897"
+              }}>
+                Join our Mailing List
+              </h3>
+              <p style={{
+                fontFamily: "Quicksand, sans-serif",
+                fontSize: "1.1rem",
+                color: "#333",
+                marginBottom: "1.5rem",
+                lineHeight: "1.6"
+              }}>
+                Join our mailing list to stay updated on our events and opportunities. 
               </p>
+              
+              {/* Email Registration Form */}
+              <form onSubmit={handleEmailSubmit} style={{ marginBottom: "1rem" }}>
+                <div style={{ marginBottom: "1rem" }}>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email address"
+                    style={{
+                      width: "100%",
+                      padding: "0.75rem",
+                      border: "1px solid #ddd",
+                      borderRadius: "6px",
+                      fontSize: "1rem",
+                      fontFamily: "Quicksand, sans-serif",
+                      marginBottom: "0.5rem"
+                    }}
+                    required
+                  />
+                </div>
+                
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  style={{
+                    backgroundColor: "#226897",
+                    color: "white",
+                    border: "none",
+                    padding: "0.75rem 1.5rem",
+                    borderRadius: "6px",
+                    fontSize: "1rem",
+                    fontFamily: "Quicksand, sans-serif",
+                    fontWeight: "600",
+                    cursor: isSubmitting ? "not-allowed" : "pointer",
+                    opacity: isSubmitting ? 0.6 : 1,
+                    transition: "all 0.3s ease",
+                    width: "100%"
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!isSubmitting) {
+                      e.target.style.backgroundColor = "#1a5a7a";
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isSubmitting) {
+                      e.target.style.backgroundColor = "#226897";
+                    }
+                  }}
+                >
+                  {isSubmitting ? 'Subscribing...' : 'Subscribe'}
+                </button>
+              </form>
+              
+              {/* Message Display */}
+              {message && (
+                <div style={{
+                  padding: "0.75rem",
+                  borderRadius: "6px",
+                  fontSize: "0.9rem",
+                  fontFamily: "Quicksand, sans-serif",
+                  backgroundColor: messageType === 'success' ? "#d4edda" : 
+                                messageType === 'error' ? "#f8d7da" : "#d1ecf1",
+                  color: messageType === 'success' ? "#155724" : 
+                         messageType === 'error' ? "#721c24" : "#0c5460",
+                  border: `1px solid ${messageType === 'success' ? "#c3e6cb" : 
+                                      messageType === 'error' ? "#f5c6cb" : "#bee5eb"}`
+                }}>
+                  {message}
+                </div>
+              )}
             </div>
-            <div className="text-center p-6 border border-gray-200 rounded-lg">
-              <div className="bg-orange-100 text-orange-800 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-xl">📝</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Content Creation</h3>
-              <p className="text-gray-600 text-sm">
-                Write articles, create social media content, and develop educational materials.
+            
+            <div style={{
+              backgroundColor: "rgba(255, 255, 255, 0.95)",
+              padding: "2rem",
+              borderRadius: "12px",
+              textAlign: "center",
+              backdropFilter: "blur(10px)",
+              border: "2px solid rgba(255,255,255,0.2)",
+              boxShadow: "0 8px 32px rgba(0,0,0,0.3)"
+            }}>
+              <h3 style={{
+                fontFamily: "Anton, sans-serif",
+                fontSize: "2rem",
+                marginBottom: "1rem",
+                color: "#226897"
+              }}>
+                Become a Member
+              </h3>
+              <p style={{
+                fontFamily: "Quicksand, sans-serif",
+                fontSize: "1.1rem",
+                color: "#333",
+                marginBottom: "1.5rem",
+                lineHeight: "1.6"
+              }}>
+                Becoming a member of BioInnovate UBC is a great way to get involved in the biotechnology community at UBC.
               </p>
+              <button style={{
+                backgroundColor: "#226897",
+                color: "white",
+                border: "none",
+                padding: "1rem 2rem",
+                borderRadius: "8px",
+                fontSize: "1.1rem",
+                fontFamily: "Quicksand, sans-serif",
+                fontWeight: "600",
+                cursor: "pointer",
+                transition: "all 0.3s ease"
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.backgroundColor = "#1a5a7a";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.backgroundColor = "#226897";
+              }}>
+                Sign Up
+              </button>
             </div>
-            <div className="text-center p-6 border border-gray-200 rounded-lg">
-              <div className="bg-red-100 text-red-800 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-xl">🔬</span>
-              </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Research Support</h3>
-              <p className="text-gray-600 text-sm">
-                Assist with research projects and laboratory work.
+            
+            <div style={{
+              backgroundColor: "rgba(255, 255, 255, 0.95)",
+              padding: "2rem",
+              borderRadius: "12px",
+              textAlign: "center",
+              backdropFilter: "blur(10px)",
+              border: "2px solid rgba(255,255,255,0.2)",
+              boxShadow: "0 8px 32px rgba(0,0,0,0.3)"
+            }}>
+              <h3 style={{
+                fontFamily: "Anton, sans-serif",
+                fontSize: "2rem",
+                marginBottom: "1rem",
+                color: "#226897"
+              }}>
+                Contact Us
+              </h3>
+              <p style={{
+                fontFamily: "Quicksand, sans-serif",
+                fontSize: "1.1rem",
+                color: "#333",
+                marginBottom: "1.5rem",
+                lineHeight: "1.6"
+              }}>
+                Use the button below to contact us via email for any questions or inquiries at bioinnovate@gmail.com.
               </p>
+              <button 
+                onClick={() => window.open('mailto:bioinnovate@gmail.com', '_blank')}
+                style={{
+                  backgroundColor: "#226897",
+                  color: "white",
+                  border: "none",
+                  padding: "1rem 2rem",
+                  borderRadius: "8px",
+                  fontSize: "1.1rem",
+                  fontFamily: "Quicksand, sans-serif",
+                  fontWeight: "600",
+                  cursor: "pointer",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = "#1a5a7a";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = "#226897";
+                }}
+              >
+                Contact Us
+              </button>
             </div>
           </div>
-        </div>
-
-        {/* Contact Form */}
-        <div className="bg-gray-50 rounded-lg p-8">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-6">Get in Touch</h2>
-          <form className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  First Name
-                </label>
-                <input
-                  type="text"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Enter your first name"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Last Name
-                </label>
-                <input
-                  type="text"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Enter your last name"
-                />
-              </div>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Enter your email"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                How would you like to get involved?
-              </label>
-              <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                <option>Select an option</option>
-                <option>Join as a student</option>
-                <option>Join as a professional</option>
-                <option>Volunteer</option>
-                <option>Partner with us</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">
-                Message
-              </label>
-              <textarea
-                rows="4"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Tell us more about how you'd like to get involved..."
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors"
-            >
-              Send Message
-            </button>
-          </form>
         </div>
       </div>
     </div>

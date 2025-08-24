@@ -8,6 +8,7 @@ import { fileURLToPath } from "url";
 import upload from "./routes/upload.js";
 import blogs from "./routes/blogs.js";
 import events from "./routes/events.js";
+import emails from "./routes/emails.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -24,8 +25,10 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 app.use("/upload", upload);
 app.use("/api/blogs", blogs);
 app.use("/api/events", events);
+app.use("/api/emails", emails);
 
 // start the Express server
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
+  console.log(`Static files served from: ${path.join(__dirname, 'uploads')}`);
 });
