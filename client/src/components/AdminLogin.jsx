@@ -24,18 +24,26 @@ export default function AdminLogin() {
     setError('');
 
     try {
-      // Simulate API call - replace with actual authentication logic
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Basic validation - replace with actual authentication
-      if (formData.username === 'admin' && formData.password === 'password') {
+      // Call the authentication API
+      const response = await fetch('http://localhost:5050/api/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
         // Success - set authentication state and redirect
         localStorage.setItem('adminAuthenticated', 'true');
         window.location.href = '/dashboard';
       } else {
-        setError('Invalid username or password');
+        setError(data.message || 'Invalid username or password');
       }
-    } catch {
+    } catch (error) {
+      console.error('Login error:', error);
       setError('An error occurred. Please try again.');
     } finally {
       setIsLoading(false);

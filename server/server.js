@@ -9,6 +9,7 @@ import upload from "./routes/upload.js";
 import blogs from "./routes/blogs.js";
 import events from "./routes/events.js";
 import emails from "./routes/emails.js";
+import auth from "./routes/auth.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -26,6 +27,7 @@ app.use("/upload", upload);
 app.use("/api/blogs", blogs);
 app.use("/api/events", events);
 app.use("/api/emails", emails);
+app.use("/api/auth", auth);
 
 // start the Express server
 app.listen(PORT, () => {

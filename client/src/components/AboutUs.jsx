@@ -187,7 +187,7 @@ export default function AboutUs() {
             margin: "0"
           }}>Get in Touch</h1>
           <a 
-            href="mailto:bioinnovate@gmail.com"
+            href="mailto:bioinnovateubc@gmail.com"
             style={{
               fontFamily: "Quicksand",
               fontSize: "18px",
@@ -209,7 +209,7 @@ export default function AboutUs() {
               e.target.style.color = "#226897";
             }}
           >
-            bioinnovate@gmail.com
+            bioinnovateubc@gmail.com
           </a>
         </div>
       </div>
