@@ -109,11 +109,18 @@ export default function GetInvolved() {
             fontSize: "1.5rem",
             textAlign: "center",
             marginBottom: "3rem",
-            color: "#226897",
-            maxWidth: "800px",
+            color: "#1a4a6b",
+            maxWidth: "900px",
             marginLeft: "auto",
             marginRight: "auto",
-            lineHeight: "1.6"
+            lineHeight: "1.8",
+            fontWeight: "500",
+            backgroundColor: "rgba(255, 255, 255, 0.95)",
+            padding: "2.5rem",
+            borderRadius: "15px",
+            boxShadow: "0 8px 32px rgba(0,0,0,0.15)",
+            backdropFilter: "blur(10px)",
+            border: "1px solid rgba(255,255,255,0.3)"
           }}>
             BioInnovate UBC is inclusive, welcoming members from multiple faculties to contribute to our mission, whether through executive roles or general membership. Our comprehensive hiring process begins in September each year, aiming to equip our team with diverse skills—from financial management to marketing—necessary to propel our initiatives forward. The BioInnovate UBC executive team features individuals with a passion for biotechnology and life sciences, holding a wide breadth of skills, culminating to provide extensive professional work of all facets.
           </p>

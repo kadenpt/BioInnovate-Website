@@ -1,6 +1,13 @@
 import React from 'react';
 import HexagonProfile from './HexagonProfile';
+
+import tomImage from '../../assets/tom.jpg';
 import kadenImage from '../../assets/kaden.jpeg';
+import taraImage from '../../assets/tara.jpg';
+import brynImage from '../../assets/bryn.jpg';
+import camImage from '../../assets/cam.jpg';
+import ethanImage from '../../assets/ethan.jpg';
+
 import homeBackground from '../../assets/homeBackground.JPG';
 import tempBackground from '../../assets/tempBackground.png';
 
@@ -135,24 +142,24 @@ export default function AboutUs() {
           }}>
             {/* First row - 2 profiles */}
             <div style={{ display: "flex", gap: "40px" }}>
-              <HexagonProfile name="Ethan Skjaveland" jobTitle="Co-Founder and Advisor" imageSrc={kadenImage} />
-              <HexagonProfile name="Thomas van der Sloot" jobTitle="Co-Founder and Advisor" imageSrc={kadenImage} />
+              <HexagonProfile name="Ethan Skjaveland" jobTitle="Co-Founder and Advisor" imageSrc={ethanImage} />
+              <HexagonProfile name="Thomas van der Sloot" jobTitle="Co-Founder and Advisor" imageSrc={tomImage} />
             </div>
             
             {/* Second row - 1 profile */}
             <div style={{ display: "flex", gap: "40px" }}>
-              <HexagonProfile name="Tara Jackson" jobTitle="President" imageSrc={kadenImage} />
+              <HexagonProfile name="Tara Jackson" jobTitle="President" imageSrc={taraImage} />
             </div>
             
             {/* Third row - 2 profiles */}
             <div style={{ display: "flex", gap: "40px" }}>
-              <HexagonProfile name="Cameron Orton" jobTitle="Chair of Engagement and Recruitment" imageSrc={kadenImage} />
+              <HexagonProfile name="Cameron Orton" jobTitle="Chair of Engagement and Recruitment" imageSrc={camImage} />
               <HexagonProfile name="Elle Groeneveld" jobTitle="Chair of Finance" imageSrc={kadenImage} />
             </div>
             
             {/* Fourth row - 3 profiles */}
             <div style={{ display: "flex", gap: "40px" }}>
-              <HexagonProfile name="Bryn Wright" jobTitle="Chair of Marketing and Communications" imageSrc={kadenImage} />
+              <HexagonProfile name="Bryn Wright" jobTitle="Chair of Marketing and Communications" imageSrc={brynImage} />
               <HexagonProfile name="Sohan Sadeque" jobTitle="Chair of Marketing and Communications" imageSrc={kadenImage} />
               <HexagonProfile name="Asmita Jain" jobTitle="Chair fo General Events" imageSrc={kadenImage} />
             </div>
