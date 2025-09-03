@@ -256,24 +256,27 @@ export default function GetInvolved() {
               }}>
                 Becoming a member of BioInnovate UBC is a great way to get involved in the biotechnology community at UBC.
               </p>
-              <button style={{
-                backgroundColor: "#226897",
-                color: "white",
-                border: "none",
-                padding: "1rem 2rem",
-                borderRadius: "8px",
-                fontSize: "1.1rem",
-                fontFamily: "Quicksand, sans-serif",
-                fontWeight: "600",
-                cursor: "pointer",
-                transition: "all 0.3s ease"
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.backgroundColor = "#1a5a7a";
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.backgroundColor = "#226897";
-              }}>
+              <button 
+                onClick={() => window.open('https://forms.gle/TRZ9vuYWQiiRUmEP9', '_blank')}
+                style={{
+                  backgroundColor: "#226897",
+                  color: "white",
+                  border: "none",
+                  padding: "1rem 2rem",
+                  borderRadius: "8px",
+                  fontSize: "1.1rem",
+                  fontFamily: "Quicksand, sans-serif",
+                  fontWeight: "600",
+                  cursor: "pointer",
+                  transition: "all 0.3s ease"
+                }}
+                onMouseEnter={(e) => {
+                  e.target.style.backgroundColor = "#1a5a7a";
+                }}
+                onMouseLeave={(e) => {
+                  e.target.style.backgroundColor = "#226897";
+                }}
+              >
                 Sign Up
               </button>
             </div>

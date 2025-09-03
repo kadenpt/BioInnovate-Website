@@ -2,7 +2,7 @@ import React from 'react';
 import HexagonProfile from './HexagonProfile';
 
 import tomImage from '../../assets/tom.jpg';
-import kadenImage from '../../assets/kaden.jpeg';
+import kadenImage from '../../assets/placeholder.png';
 import taraImage from '../../assets/tara.jpg';
 import brynImage from '../../assets/bryn.jpg';
 import camImage from '../../assets/cam.jpg';
