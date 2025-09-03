@@ -25,7 +25,8 @@ export default function AdminLogin() {
 
     try {
       // Call the authentication API
-      const response = await fetch('http://localhost:5050/api/auth/login', {
+      const authUrl = `${import.meta.env.VITE_API_URL || 'http://localhost:5050'}/api/auth/login`;
+      const response = await fetch(authUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
