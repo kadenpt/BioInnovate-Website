@@ -134,7 +134,7 @@ export default function AdminDashboard() {
       const formData = new FormData();
       formData.append('image', file);
 
-      const response = await fetch('http://localhost:5050/upload', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5050'}/upload`, {
         method: 'POST',
         body: formData,
       });
