@@ -1,7 +1,7 @@
-const BASE_URL = 'http://localhost:5050/api';
+const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5050';
 
 const apiCall = async (endpoint, options = {}) => {
-  const url = `${BASE_URL}${endpoint}`;
+  const url = `${BASE_URL}/api${endpoint}`;
   const response = await fetch(url, {
     headers: {
       'Content-Type': 'application/json',
