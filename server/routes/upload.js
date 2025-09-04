@@ -44,7 +44,7 @@ const fileFilter = (req, file, cb) => {
 };
 
 // Configure multer with local storage
-const upload = multer({
+const uploadMiddleware = multer({
   storage: storage,
   fileFilter: fileFilter,
   limits: {
@@ -52,8 +52,13 @@ const upload = multer({
   }
 });
 
+// Test route
+router.get("/", (req, res) => {
+  res.json({ message: "Upload route is working!" });
+});
+
 // POST /upload - Upload a single image to Cloudinary
-router.post("/", upload.single('image'), async (req, res) => {
+router.post("/", uploadMiddleware.single('image'), async (req, res) => {
   try {
     console.log('Upload request received');
     
