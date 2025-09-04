@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import {
-  createHashRouter,
+  createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import App from "./App";
@@ -15,7 +15,7 @@ import AdminDashboard from "./components/AdminDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import "./index.css";
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
@@ -54,7 +54,9 @@ const router = createHashRouter([
       </ProtectedRoute>
     ),
   },
-]);
+], {
+  basename: "/bioinnovate-website"
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
