@@ -54,7 +54,9 @@ const router = createBrowserRouter([
       </ProtectedRoute>
     ),
   },
-]);
+], {
+  basename: "/bioinnovate-website"
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
