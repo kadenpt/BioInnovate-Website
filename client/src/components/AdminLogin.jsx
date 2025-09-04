@@ -98,7 +98,7 @@ export default function AdminLogin() {
             Admin Login
           </h1>
           <p style={{
-            fontFamily: "Quicksand, sans-serif",
+            fontFamily: "roboto, sans-serif",
             color: "#666",
             fontSize: "0.9rem",
             margin: 0
@@ -112,7 +112,7 @@ export default function AdminLogin() {
           <div style={{ marginBottom: "1.5rem" }}>
             <label style={{
               display: "block",
-              fontFamily: "Quicksand, sans-serif",
+              fontFamily: "roboto, sans-serif",
               color: "#226897",
               fontSize: "0.9rem",
               fontWeight: "bold",
@@ -131,7 +131,7 @@ export default function AdminLogin() {
                 border: "2px solid #e9ecef",
                 borderRadius: "8px",
                 fontSize: "1rem",
-                fontFamily: "Quicksand, sans-serif",
+                fontFamily: "roboto, sans-serif",
                 transition: "border-color 0.3s ease",
                 boxSizing: "border-box"
               }}
@@ -149,7 +149,7 @@ export default function AdminLogin() {
           <div style={{ marginBottom: "2rem" }}>
             <label style={{
               display: "block",
-              fontFamily: "Quicksand, sans-serif",
+              fontFamily: "roboto, sans-serif",
               color: "#226897",
               fontSize: "0.9rem",
               fontWeight: "bold",
@@ -168,7 +168,7 @@ export default function AdminLogin() {
                 border: "2px solid #e9ecef",
                 borderRadius: "8px",
                 fontSize: "1rem",
-                fontFamily: "Quicksand, sans-serif",
+                fontFamily: "roboto, sans-serif",
                 transition: "border-color 0.3s ease",
                 boxSizing: "border-box"
               }}
@@ -191,7 +191,7 @@ export default function AdminLogin() {
               padding: "0.75rem",
               borderRadius: "8px",
               marginBottom: "1rem",
-              fontFamily: "Quicksand, sans-serif",
+              fontFamily: "roboto, sans-serif",
               fontSize: "0.9rem",
               border: "1px solid #f5c6cb"
             }}>
@@ -211,7 +211,7 @@ export default function AdminLogin() {
               border: "none",
               borderRadius: "8px",
               fontSize: "1rem",
-              fontFamily: "Quicksand, sans-serif",
+              fontFamily: "roboto, sans-serif",
               fontWeight: "bold",
               cursor: isLoading ? "not-allowed" : "pointer",
               transition: "background-color 0.3s ease",
@@ -240,7 +240,7 @@ export default function AdminLogin() {
           borderTop: "1px solid #e9ecef"
         }}>
           <p style={{
-            fontFamily: "Quicksand, sans-serif",
+            fontFamily: "roboto, sans-serif",
             color: "#666",
             fontSize: "0.8rem",
             margin: 0

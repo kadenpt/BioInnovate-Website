@@ -288,7 +288,7 @@ export default function AdminDashboard() {
               padding: "1rem 2rem",
               borderRadius: "8px",
               fontSize: "1.1rem",
-              fontFamily: "Quicksand, sans-serif",
+              fontFamily: "roboto, sans-serif",
               fontWeight: "600",
               cursor: "pointer",
               transition: "all 0.3s ease"
@@ -305,7 +305,7 @@ export default function AdminDashboard() {
               padding: "1rem 2rem",
               borderRadius: "8px",
               fontSize: "1.1rem",
-              fontFamily: "Quicksand, sans-serif",
+              fontFamily: "roboto, sans-serif",
               fontWeight: "600",
               cursor: "pointer",
               transition: "all 0.3s ease"
@@ -324,7 +324,7 @@ export default function AdminDashboard() {
             borderRadius: "8px",
             marginBottom: "2rem",
             textAlign: "center",
-            fontFamily: "Quicksand, sans-serif"
+            fontFamily: "roboto, sans-serif"
           }}>
             {message}
           </div>
@@ -358,7 +358,7 @@ export default function AdminDashboard() {
                     <label style={{
                       display: "block",
                       marginBottom: "0.5rem",
-                      fontFamily: "Quicksand, sans-serif",
+                      fontFamily: "roboto, sans-serif",
                       fontWeight: "600",
                       color: "#333"
                     }}>
@@ -374,7 +374,7 @@ export default function AdminDashboard() {
                         padding: "0.75rem",
                         border: "1px solid #ddd",
                         borderRadius: "4px",
-                        fontFamily: "Quicksand, sans-serif"
+                        fontFamily: "roboto, sans-serif"
                       }}
                       required
                     />
@@ -384,7 +384,7 @@ export default function AdminDashboard() {
                     <label style={{
                       display: "block",
                       marginBottom: "0.5rem",
-                      fontFamily: "Quicksand, sans-serif",
+                      fontFamily: "roboto, sans-serif",
                       fontWeight: "600",
                       color: "#333"
                     }}>
@@ -399,7 +399,7 @@ export default function AdminDashboard() {
                         padding: "0.75rem",
                         border: "1px solid #ddd",
                         borderRadius: "4px",
-                        fontFamily: "Quicksand, sans-serif",
+                        fontFamily: "roboto, sans-serif",
                         minHeight: "80px",
                         resize: "vertical"
                       }}
@@ -412,7 +412,7 @@ export default function AdminDashboard() {
                     <label style={{
                       display: "block",
                       marginBottom: "0.5rem",
-                      fontFamily: "Quicksand, sans-serif",
+                      fontFamily: "roboto, sans-serif",
                       fontWeight: "600",
                       color: "#333"
                     }}>
@@ -428,7 +428,7 @@ export default function AdminDashboard() {
                         padding: "0.75rem",
                         border: "1px solid #ddd",
                         borderRadius: "4px",
-                        fontFamily: "Quicksand, sans-serif"
+                        fontFamily: "roboto, sans-serif"
                       }}
                       required
                     />
@@ -438,7 +438,7 @@ export default function AdminDashboard() {
                     <label style={{
                       display: "block",
                       marginBottom: "0.5rem",
-                      fontFamily: "Quicksand, sans-serif",
+                      fontFamily: "roboto, sans-serif",
                       fontWeight: "600",
                       color: "#333"
                     }}>
@@ -453,7 +453,7 @@ export default function AdminDashboard() {
                         padding: "0.75rem",
                         border: "1px solid #ddd",
                         borderRadius: "4px",
-                        fontFamily: "Quicksand, sans-serif",
+                        fontFamily: "roboto, sans-serif",
                         minHeight: "200px",
                         resize: "vertical"
                       }}
@@ -466,7 +466,7 @@ export default function AdminDashboard() {
                     <label style={{
                       display: "block",
                       marginBottom: "0.5rem",
-                      fontFamily: "Quicksand, sans-serif",
+                      fontFamily: "roboto, sans-serif",
                       fontWeight: "600",
                       color: "#333"
                     }}>
@@ -536,7 +536,7 @@ export default function AdminDashboard() {
                         padding: "1rem 2rem",
                         borderRadius: "8px",
                         fontSize: "1.1rem",
-                        fontFamily: "Quicksand, sans-serif",
+                        fontFamily: "roboto, sans-serif",
                         fontWeight: "600",
                         cursor: isSubmitting ? "not-allowed" : "pointer",
                         opacity: isSubmitting ? 0.6 : 1,
@@ -557,7 +557,7 @@ export default function AdminDashboard() {
                           padding: "1rem 2rem",
                           borderRadius: "8px",
                           fontSize: "1.1rem",
-                          fontFamily: "Quicksand, sans-serif",
+                          fontFamily: "roboto, sans-serif",
                           fontWeight: "600",
                           cursor: "pointer",
                           transition: "all 0.3s ease"
@@ -590,7 +590,7 @@ export default function AdminDashboard() {
                     <label style={{
                       display: "block",
                       marginBottom: "0.5rem",
-                      fontFamily: "Quicksand, sans-serif",
+                      fontFamily: "roboto, sans-serif",
                       fontWeight: "600",
                       color: "#333"
                     }}>
@@ -606,7 +606,7 @@ export default function AdminDashboard() {
                         padding: "0.75rem",
                         border: "1px solid #ddd",
                         borderRadius: "4px",
-                        fontFamily: "Quicksand, sans-serif"
+                        fontFamily: "roboto, sans-serif"
                       }}
                       required
                     />
@@ -616,7 +616,7 @@ export default function AdminDashboard() {
                     <label style={{
                       display: "block",
                       marginBottom: "0.5rem",
-                      fontFamily: "Quicksand, sans-serif",
+                      fontFamily: "roboto, sans-serif",
                       fontWeight: "600",
                       color: "#333"
                     }}>
@@ -632,7 +632,7 @@ export default function AdminDashboard() {
                         padding: "0.75rem",
                         border: "1px solid #ddd",
                         borderRadius: "4px",
-                        fontFamily: "Quicksand, sans-serif"
+                        fontFamily: "roboto, sans-serif"
                       }}
                       required
                     />
@@ -642,7 +642,7 @@ export default function AdminDashboard() {
                     <label style={{
                       display: "block",
                       marginBottom: "0.5rem",
-                      fontFamily: "Quicksand, sans-serif",
+                      fontFamily: "roboto, sans-serif",
                       fontWeight: "600",
                       color: "#333"
                     }}>
@@ -658,7 +658,7 @@ export default function AdminDashboard() {
                         padding: "0.75rem",
                         border: "1px solid #ddd",
                         borderRadius: "4px",
-                        fontFamily: "Quicksand, sans-serif"
+                        fontFamily: "roboto, sans-serif"
                       }}
                       required
                     />
@@ -668,7 +668,7 @@ export default function AdminDashboard() {
                     <label style={{
                       display: "block",
                       marginBottom: "0.5rem",
-                      fontFamily: "Quicksand, sans-serif",
+                      fontFamily: "roboto, sans-serif",
                       fontWeight: "600",
                       color: "#333"
                     }}>
@@ -684,7 +684,7 @@ export default function AdminDashboard() {
                         padding: "0.75rem",
                         border: "1px solid #ddd",
                         borderRadius: "4px",
-                        fontFamily: "Quicksand, sans-serif"
+                        fontFamily: "roboto, sans-serif"
                       }}
                       required
                     />
@@ -694,7 +694,7 @@ export default function AdminDashboard() {
                     <label style={{
                       display: "block",
                       marginBottom: "0.5rem",
-                      fontFamily: "Quicksand, sans-serif",
+                      fontFamily: "roboto, sans-serif",
                       fontWeight: "600",
                       color: "#333"
                     }}>
@@ -709,7 +709,7 @@ export default function AdminDashboard() {
                         padding: "0.75rem",
                         border: "1px solid #ddd",
                         borderRadius: "4px",
-                        fontFamily: "Quicksand, sans-serif",
+                        fontFamily: "roboto, sans-serif",
                         minHeight: "100px",
                         resize: "vertical"
                       }}
@@ -722,7 +722,7 @@ export default function AdminDashboard() {
                     <label style={{
                       display: "block",
                       marginBottom: "0.5rem",
-                      fontFamily: "Quicksand, sans-serif",
+                      fontFamily: "roboto, sans-serif",
                       fontWeight: "600",
                       color: "#333"
                     }}>
@@ -738,7 +738,7 @@ export default function AdminDashboard() {
                         padding: "0.75rem",
                         border: "1px solid #ddd",
                         borderRadius: "4px",
-                        fontFamily: "Quicksand, sans-serif"
+                        fontFamily: "roboto, sans-serif"
                       }}
                       placeholder="https://example.com/rsvp"
                     />
@@ -759,7 +759,7 @@ export default function AdminDashboard() {
                         padding: "1rem 2rem",
                         borderRadius: "8px",
                         fontSize: "1.1rem",
-                        fontFamily: "Quicksand, sans-serif",
+                        fontFamily: "roboto, sans-serif",
                         fontWeight: "600",
                         cursor: isSubmitting ? "not-allowed" : "pointer",
                         opacity: isSubmitting ? 0.6 : 1,
@@ -780,7 +780,7 @@ export default function AdminDashboard() {
                           padding: "1rem 2rem",
                           borderRadius: "8px",
                           fontSize: "1.1rem",
-                          fontFamily: "Quicksand, sans-serif",
+                          fontFamily: "roboto, sans-serif",
                           fontWeight: "600",
                           cursor: "pointer",
                           transition: "all 0.3s ease"
@@ -825,7 +825,7 @@ export default function AdminDashboard() {
                       <p style={{
                         textAlign: "center",
                         color: "#666",
-                        fontFamily: "Quicksand, sans-serif",
+                        fontFamily: "roboto, sans-serif",
                         marginTop: "2rem"
                       }}>
                         No blogs created yet.
@@ -843,7 +843,7 @@ export default function AdminDashboard() {
                           }}
                         >
                           <h3 style={{
-                            fontFamily: "Quicksand, sans-serif",
+                            fontFamily: "roboto, sans-serif",
                             fontSize: "1.2rem",
                             color: "#226897",
                             marginBottom: "0.5rem"
@@ -851,7 +851,7 @@ export default function AdminDashboard() {
                             {blog.title || 'Untitled'}
                           </h3>
                           <p style={{
-                            fontFamily: "Quicksand, sans-serif",
+                            fontFamily: "roboto, sans-serif",
                             fontSize: "0.9rem",
                             color: "#666",
                             marginBottom: "0.5rem"
@@ -860,7 +860,7 @@ export default function AdminDashboard() {
                           </p>
                           {blog.snippet && (
                             <p style={{
-                              fontFamily: "Quicksand, sans-serif",
+                              fontFamily: "roboto, sans-serif",
                               fontSize: "0.9rem",
                               color: "#333",
                               marginBottom: "1rem"
@@ -881,7 +881,7 @@ export default function AdminDashboard() {
                                 padding: "0.5rem 1rem",
                                 borderRadius: "4px",
                                 fontSize: "0.8rem",
-                                fontFamily: "Quicksand, sans-serif",
+                                fontFamily: "roboto, sans-serif",
                                 fontWeight: "600",
                                 cursor: "pointer",
                                 transition: "all 0.3s ease"
@@ -904,7 +904,7 @@ export default function AdminDashboard() {
                                 padding: "0.5rem 1rem",
                                 borderRadius: "4px",
                                 fontSize: "0.8rem",
-                                fontFamily: "Quicksand, sans-serif",
+                                fontFamily: "roboto, sans-serif",
                                 fontWeight: "600",
                                 cursor: "pointer",
                                 transition: "all 0.3s ease"
@@ -929,7 +929,7 @@ export default function AdminDashboard() {
                       <p style={{
                         textAlign: "center",
                         color: "#666",
-                        fontFamily: "Quicksand, sans-serif",
+                        fontFamily: "roboto, sans-serif",
                         marginTop: "2rem"
                       }}>
                         No events created yet.
@@ -947,7 +947,7 @@ export default function AdminDashboard() {
                           }}
                         >
                           <h3 style={{
-                            fontFamily: "Quicksand, sans-serif",
+                            fontFamily: "roboto, sans-serif",
                             fontSize: "1.2rem",
                             color: "#226897",
                             marginBottom: "0.5rem"
@@ -955,7 +955,7 @@ export default function AdminDashboard() {
                             {event.name || 'Untitled'}
                           </h3>
                           <p style={{
-                            fontFamily: "Quicksand, sans-serif",
+                            fontFamily: "roboto, sans-serif",
                             fontSize: "0.9rem",
                             color: "#666",
                             marginBottom: "0.5rem"
@@ -964,7 +964,7 @@ export default function AdminDashboard() {
                           </p>
                           {event.description && (
                             <p style={{
-                              fontFamily: "Quicksand, sans-serif",
+                              fontFamily: "roboto, sans-serif",
                               fontSize: "0.9rem",
                               color: "#333",
                               marginBottom: "1rem"
@@ -985,7 +985,7 @@ export default function AdminDashboard() {
                                 padding: "0.5rem 1rem",
                                 borderRadius: "4px",
                                 fontSize: "0.8rem",
-                                fontFamily: "Quicksand, sans-serif",
+                                fontFamily: "roboto, sans-serif",
                                 fontWeight: "600",
                                 cursor: "pointer",
                                 transition: "all 0.3s ease"
@@ -1008,7 +1008,7 @@ export default function AdminDashboard() {
                                 padding: "0.5rem 1rem",
                                 borderRadius: "4px",
                                 fontSize: "0.8rem",
-                                fontFamily: "Quicksand, sans-serif",
+                                fontFamily: "roboto, sans-serif",
                                 fontWeight: "600",
                                 cursor: "pointer",
                                 transition: "all 0.3s ease"

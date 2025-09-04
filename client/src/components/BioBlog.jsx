@@ -218,7 +218,7 @@ export default function BioBlog() {
                       )}
                       <div style={{ padding: "1.5rem" }}>
                         <h3 style={{
-                          fontFamily: "Quicksand, sans-serif",
+                          fontFamily: "roboto, sans-serif",
                           fontSize: "1.5rem",
                           fontWeight: "bold",
                           color: "#226897",
@@ -229,7 +229,7 @@ export default function BioBlog() {
                         <p style={{
                           color: "#6b7280",
                           marginBottom: "1rem",
-                          fontFamily: "Quicksand, sans-serif",
+                          fontFamily: "roboto, sans-serif",
                           fontSize: "1rem",
                           lineHeight: "1.5"
                         }}>
@@ -243,7 +243,7 @@ export default function BioBlog() {
                           <div style={{
                             fontSize: "0.875rem",
                             color: "#6b7280",
-                            fontFamily: "Quicksand, sans-serif"
+                            fontFamily: "roboto, sans-serif"
                           }}>
                             <span>By {currentBlogs[0].author || 'Unknown Author'}</span>
                             <span style={{ margin: "0 0.5rem" }}>•</span>
@@ -256,7 +256,7 @@ export default function BioBlog() {
                             borderRadius: "0.5rem",
                             fontSize: "0.8rem",
                             textTransform: "uppercase",
-                            fontFamily: "Quicksand, sans-serif",
+                            fontFamily: "roboto, sans-serif",
                             border: "none",
                             cursor: "pointer"
                           }}>
@@ -289,7 +289,7 @@ export default function BioBlog() {
                     >
                       <div style={{ padding: "1.5rem" }}>
                         <h3 style={{
-                          fontFamily: "Quicksand, sans-serif",
+                          fontFamily: "roboto, sans-serif",
                           fontSize: "1.5rem",
                           fontWeight: "bold",
                           color: "#226897",
@@ -300,7 +300,7 @@ export default function BioBlog() {
                         <p style={{
                           color: "#6b7280",
                           marginBottom: "1rem",
-                          fontFamily: "Quicksand, sans-serif",
+                          fontFamily: "roboto, sans-serif",
                           fontSize: "1rem",
                           lineHeight: "1.5"
                         }}>
@@ -314,7 +314,7 @@ export default function BioBlog() {
                           <div style={{
                             fontSize: "0.875rem",
                             color: "#6b7280",
-                            fontFamily: "Quicksand, sans-serif"
+                            fontFamily: "roboto, sans-serif"
                           }}>
                             <span>By {blog.author || 'Unknown Author'}</span>
                             <span style={{ margin: "0 0.5rem" }}>•</span>
@@ -327,7 +327,7 @@ export default function BioBlog() {
                             borderRadius: "0.5rem",
                             fontSize: "0.8rem",
                             textTransform: "uppercase",
-                            fontFamily: "Quicksand, sans-serif",
+                            fontFamily: "roboto, sans-serif",
                             border: "none",
                             cursor: "pointer"
                           }}>

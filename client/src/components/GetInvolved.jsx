@@ -105,7 +105,7 @@ export default function GetInvolved() {
           </h1>
           
           <p style={{
-            fontFamily: "Quicksand, sans-serif",
+            fontFamily: "roboto, sans-serif",
             fontSize: "1.5rem",
             textAlign: "center",
             marginBottom: "3rem",
@@ -149,7 +149,7 @@ export default function GetInvolved() {
                 Join our Mailing List
               </h3>
               <p style={{
-                fontFamily: "Quicksand, sans-serif",
+                fontFamily: "roboto, sans-serif",
                 fontSize: "1.1rem",
                 color: "#333",
                 marginBottom: "1.5rem",
@@ -172,7 +172,7 @@ export default function GetInvolved() {
                       border: "1px solid #ddd",
                       borderRadius: "6px",
                       fontSize: "1rem",
-                      fontFamily: "Quicksand, sans-serif",
+                      fontFamily: "roboto, sans-serif",
                       marginBottom: "0.5rem"
                     }}
                     required
@@ -189,7 +189,7 @@ export default function GetInvolved() {
                     padding: "0.75rem 1.5rem",
                     borderRadius: "6px",
                     fontSize: "1rem",
-                    fontFamily: "Quicksand, sans-serif",
+                    fontFamily: "roboto, sans-serif",
                     fontWeight: "600",
                     cursor: isSubmitting ? "not-allowed" : "pointer",
                     opacity: isSubmitting ? 0.6 : 1,
@@ -217,7 +217,7 @@ export default function GetInvolved() {
                   padding: "0.75rem",
                   borderRadius: "6px",
                   fontSize: "0.9rem",
-                  fontFamily: "Quicksand, sans-serif",
+                  fontFamily: "roboto, sans-serif",
                   backgroundColor: messageType === 'success' ? "#d4edda" : 
                                 messageType === 'error' ? "#f8d7da" : "#d1ecf1",
                   color: messageType === 'success' ? "#155724" : 
@@ -248,7 +248,7 @@ export default function GetInvolved() {
                 Become a Member
               </h3>
               <p style={{
-                fontFamily: "Quicksand, sans-serif",
+                fontFamily: "roboto, sans-serif",
                 fontSize: "1.1rem",
                 color: "#333",
                 marginBottom: "1.5rem",
@@ -265,7 +265,7 @@ export default function GetInvolved() {
                   padding: "1rem 2rem",
                   borderRadius: "8px",
                   fontSize: "1.1rem",
-                  fontFamily: "Quicksand, sans-serif",
+                  fontFamily: "roboto, sans-serif",
                   fontWeight: "600",
                   cursor: "pointer",
                   transition: "all 0.3s ease"
@@ -299,7 +299,7 @@ export default function GetInvolved() {
                 Contact Us
               </h3>
               <p style={{
-                fontFamily: "Quicksand, sans-serif",
+                fontFamily: "roboto, sans-serif",
                 fontSize: "1.1rem",
                 color: "#333",
                 marginBottom: "1.5rem",
@@ -316,7 +316,7 @@ export default function GetInvolved() {
                   padding: "1rem 2rem",
                   borderRadius: "8px",
                   fontSize: "1.1rem",
-                  fontFamily: "Quicksand, sans-serif",
+                  fontFamily: "roboto, sans-serif",
                   fontWeight: "600",
                   cursor: "pointer",
                   transition: "all 0.3s ease"

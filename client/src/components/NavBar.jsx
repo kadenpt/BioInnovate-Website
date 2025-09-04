@@ -41,29 +41,29 @@ export default function Navbar() {
           }}>BioInnovate UBC</h1>
         </div>
         <NavLink to="/"  style={{
-          fontFamily: "Quicksand",
-          fontSize: "16px",
+          fontFamily: "roboto",
+          fontSize: "22px",
           color: "#226897",
         }}>
           ABOUT US
         </NavLink>
         <NavLink to="/events" style={{
-          fontFamily: "Quicksand",
-          fontSize: "16px",
+          fontFamily: "roboto",
+          fontSize: "22px",
           color: "#226897",
         }}>
           EVENTS
         </NavLink>
         <NavLink to="/bioblog" style={{
-          fontFamily: "Quicksand",
-          fontSize: "16px",
+          fontFamily: "roboto",
+          fontSize: "22px",
           color: "#226897",
         }}>
           BIOBLOG
         </NavLink>
         <NavLink to="/getinvolved" style={{
-          fontFamily: "Quicksand",
-          fontSize: "16px",
+          fontFamily: "roboto",
+          fontSize: "22px",
           color: "#226897",
         }}>
           GET INVOLVED

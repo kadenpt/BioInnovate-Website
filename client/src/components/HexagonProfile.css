@@ -21,7 +21,7 @@
     7% 25%
   );
   overflow: hidden;
-  background-color: #226897;
+  background-color: #68adc4;
   padding: 6px;
   box-sizing: border-box;
 }
@@ -44,14 +44,21 @@
 
 .profile-name {
   margin-top: 8px;
-  background-color: #226897; /* Tailwind's slate-100 */
+  background-color: #68adc4; /* Tailwind's slate-100 */
   padding: 0.5rem;
   border-radius: 4px;
   font-size: 1rem;
   font-weight: 300;
   color: white;
-  font-family: "Quicksand";
+  font-family: "Roboto";
   text-align: center;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .profile-name .job-title {
@@ -59,5 +66,10 @@
   font-size: 0.8rem;
   font-weight: 300;
   color: #e0e0e0;
-  font-family: "Quicksand";
+  font-family: "Roboto";
+  text-align: center;
+  line-height: 1.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }

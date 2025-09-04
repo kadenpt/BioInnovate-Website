@@ -122,7 +122,7 @@ export default function Calendar({ events = [] }) {
           <div key={day} style={{
             textAlign: "center",
             padding: "0.5rem",
-            fontFamily: "Quicksand, sans-serif",
+            fontFamily: "roboto, sans-serif",
             fontWeight: "bold",
             color: "#226897",
             fontSize: "0.9rem"
@@ -151,7 +151,7 @@ export default function Calendar({ events = [] }) {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "flex-start",
-                fontFamily: "Quicksand, sans-serif",
+                fontFamily: "roboto, sans-serif",
                 fontSize: "0.9rem",
                 color: day ? "#333" : "transparent",
                 backgroundColor: day ? (hasEvents ? "#e3f2fd" : "#f8f9fa") : "transparent",
@@ -198,7 +198,7 @@ export default function Calendar({ events = [] }) {
                         padding: "2px 4px",
                         borderRadius: "3px",
                         fontSize: "0.7rem",
-                        fontFamily: "Quicksand, sans-serif",
+                        fontFamily: "roboto, sans-serif",
                         fontWeight: "500",
                         textAlign: "center",
                         width: "90%",
@@ -219,7 +219,7 @@ export default function Calendar({ events = [] }) {
                       padding: "2px 4px",
                       borderRadius: "3px",
                       fontSize: "0.7rem",
-                      fontFamily: "Quicksand, sans-serif",
+                      fontFamily: "roboto, sans-serif",
                       fontWeight: "500",
                       textAlign: "center",
                       width: "90%"

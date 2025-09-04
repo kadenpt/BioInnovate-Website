@@ -90,7 +90,7 @@ export default function BlogView() {
             boxShadow: "0 8px 32px rgba(0,0,0,0.3)"
           }}>
             <p style={{
-              fontFamily: "Quicksand, sans-serif",
+              fontFamily: "roboto, sans-serif",
               fontSize: "1.2rem",
               color: "#666"
             }}>
@@ -169,7 +169,7 @@ export default function BlogView() {
                 padding: "0.75rem 1.5rem",
                 borderRadius: "8px",
                 fontSize: "1rem",
-                fontFamily: "Quicksand, sans-serif",
+                fontFamily: "roboto, sans-serif",
                 fontWeight: "600",
                 cursor: "pointer",
                 transition: "all 0.3s ease"
@@ -246,7 +246,7 @@ export default function BlogView() {
               padding: "0.5rem 1rem",
               borderRadius: "6px",
               fontSize: "0.9rem",
-              fontFamily: "Quicksand, sans-serif",
+              fontFamily: "roboto, sans-serif",
               fontWeight: "600",
               cursor: "pointer",
               transition: "all 0.3s ease",
@@ -299,7 +299,7 @@ export default function BlogView() {
                 marginBottom: "1rem"
               }}>
                 <span style={{
-                  fontFamily: "Quicksand, sans-serif",
+                  fontFamily: "roboto, sans-serif",
                   fontSize: "1rem",
                   color: "#666",
                   backgroundColor: "#f8f9fa",
@@ -309,7 +309,7 @@ export default function BlogView() {
                   By {blog.author || 'Unknown Author'}
                 </span>
                 <span style={{
-                  fontFamily: "Quicksand, sans-serif",
+                  fontFamily: "roboto, sans-serif",
                   fontSize: "1rem",
                   color: "#666",
                   backgroundColor: "#f8f9fa",
@@ -322,7 +322,7 @@ export default function BlogView() {
               
               {blog.snippet && (
                 <p style={{
-                  fontFamily: "Quicksand, sans-serif",
+                  fontFamily: "roboto, sans-serif",
                   fontSize: "1.3rem",
                   color: "#666",
                   lineHeight: "1.6",
@@ -368,7 +368,7 @@ export default function BlogView() {
 
             {/* Blog Content */}
             <div style={{
-              fontFamily: "Quicksand, sans-serif",
+              fontFamily: "roboto, sans-serif",
               fontSize: "1.1rem",
               lineHeight: "1.8",
               color: "#333"

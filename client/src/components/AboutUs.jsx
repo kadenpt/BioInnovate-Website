@@ -63,14 +63,14 @@ export default function AboutUs() {
         <h1 style={{ 
           alignSelf: "flex-start",
           fontFamily: "Anton",
-          color: "#226897",
+          color: "#68adc4",
           fontSize: "40px",
           fontWeight: "bold",
           textAlign: "left",
           margin: "0"
         }}>WHO ARE WE</h1>
         <p style={{
-          fontFamily: "Quicksand, sans-serif",
+          fontFamily: "roboto, sans-serif",
           fontSize: "18px",
           color: "#1a4a6b",
           lineHeight: "1.8",
@@ -95,14 +95,14 @@ export default function AboutUs() {
         }}>
           <h1 style={{
             fontFamily: "Anton",
-            color: "#226897",
+            color: "#68adc4",
             fontSize: "40px",
             fontWeight: "bold",
             textAlign: "right",
             margin: "0"
           }}>OUR VISION</h1>
           <p style={{
-            fontFamily: "Quicksand, sans-serif",
+            fontFamily: "roboto, sans-serif",
             fontSize: "18px",
             color: "#1a4a6b",
             lineHeight: "1.8",
@@ -127,7 +127,7 @@ export default function AboutUs() {
         }}>
           <h1 style={{
             fontFamily: "Anton",
-            color: "#226897",
+            color: "#68adc4",
             fontSize: "40px",
             fontWeight: "bold",
             textAlign: "center",
@@ -161,7 +161,7 @@ export default function AboutUs() {
             <div style={{ display: "flex", gap: "40px" }}>
               <HexagonProfile name="Bryn Wright" jobTitle="Chair of Marketing and Communications" imageSrc={brynImage} />
               <HexagonProfile name="Sohan Sadeque" jobTitle="Chair of Marketing and Communications" imageSrc={kadenImage} />
-              <HexagonProfile name="Asmita Jain" jobTitle="Chair fo General Events" imageSrc={kadenImage} />
+              <HexagonProfile name="Asmita Jain" jobTitle="Chair of General Events" imageSrc={kadenImage} />
             </div>
             
             {/* Fifth row - 2 profiles */}
@@ -180,7 +180,7 @@ export default function AboutUs() {
         }}>
           <h1 style={{
             fontFamily: "Anton",
-            color: "#226897",
+            color: "#68adc4",
             fontSize: "40px",
             fontWeight: "bold",
             textAlign: "center",
@@ -189,24 +189,24 @@ export default function AboutUs() {
           <a 
             href="mailto:bioinnovateubc@gmail.com"
             style={{
-              fontFamily: "Quicksand",
+              fontFamily: "roboto",
               fontSize: "18px",
-              color: "#226897",
+              color: "#68adc4",
               textDecoration: "none",
               marginTop: "10px",
               padding: "10px 20px",
-              border: "2px solid #226897",
+              border: "2px solid #68adc4",
               borderRadius: "25px",
               transition: "all 0.3s ease",
               cursor: "pointer",
             }}
             onMouseEnter={(e) => {
-              e.target.style.backgroundColor = "#226897";
+              e.target.style.backgroundColor = "#68adc4";
               e.target.style.color = "white";
             }}
             onMouseLeave={(e) => {
               e.target.style.backgroundColor = "transparent";
-              e.target.style.color = "#226897";
+              e.target.style.color = "#68adc4";
             }}
           >
             bioinnovateubc@gmail.com
