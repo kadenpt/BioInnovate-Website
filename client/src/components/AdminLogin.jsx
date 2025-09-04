@@ -1,8 +1,6 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 export default function AdminLogin() {
-  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     username: '',
     password: ''
@@ -41,7 +39,7 @@ export default function AdminLogin() {
       if (data.success) {
         // Success - set authentication state and redirect
         localStorage.setItem('adminAuthenticated', 'true');
-        navigate('/dashboard');
+        window.location.href = '/BioInnovate-Website/#/dashboard';
       } else {
         setError(data.message || 'Invalid username or password');
       }
