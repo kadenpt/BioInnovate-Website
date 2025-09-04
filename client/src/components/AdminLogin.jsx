@@ -39,7 +39,7 @@ export default function AdminLogin() {
       if (data.success) {
         // Success - set authentication state and redirect
         localStorage.setItem('adminAuthenticated', 'true');
-        window.location.href = '/BioInnovate-Website/#/dashboard';
+        window.location.href = '/#/dashboard';
       } else {
         setError(data.message || 'Invalid username or password');
       }
