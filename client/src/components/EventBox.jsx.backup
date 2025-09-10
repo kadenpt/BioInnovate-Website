@@ -1,13 +1,7 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 export default function EventBox({ event }) {
   const [isHovered, setIsHovered] = useState(false);
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate(`/event/${event._id}`);
-  };
 
   return (
     <div
@@ -30,7 +24,6 @@ export default function EventBox({ event }) {
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={handleClick}
     >
       <div>
         <h3 style={{ 

@@ -7,7 +7,6 @@ import {
 import App from "./App";
 import AboutUs from "./components/AboutUs";
 import Events from "./components/Events";
-import EventView from "./components/EventView";
 import BioBlog from "./components/BioBlog";
 import BlogView from "./components/BlogView";
 import GetInvolved from "./components/GetInvolved";
@@ -28,10 +27,6 @@ const router = createBrowserRouter([
       {
         path: "/events",
         element: <Events />,
-      },
-      {
-        path: "/event/:id",
-        element: <EventView />,
       },
       {
         path: "/bioblog",
