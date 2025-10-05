@@ -7,6 +7,11 @@ import taraImage from '../../assets/tara.jpg';
 import brynImage from '../../assets/bryn.jpg';
 import camImage from '../../assets/cam.jpg';
 import ethanImage from '../../assets/ethan.jpg';
+import sohanImage from '../../assets/sohan.jpg';
+import elleImage from '../../assets/elle.jpeg';
+import asmitaImage from '../../assets/asmita_jain.jpeg';
+import geoffImage from '../../assets/geoff.jpeg';
+ // shirleyImage from '../../assets/shirley.jpg';
 
 import homeBackground from '../../assets/homeBackground.JPG';
 import tempBackground from '../../assets/tempBackground.png';
@@ -154,20 +159,20 @@ export default function AboutUs() {
             {/* Third row - 2 profiles */}
             <div style={{ display: "flex", gap: "40px" }}>
               <HexagonProfile name="Cameron Orton" jobTitle="Chair of Engagement and Recruitment" imageSrc={camImage} />
-              <HexagonProfile name="Elle Groeneveld" jobTitle="Chair of Finance" imageSrc={kadenImage} />
+              <HexagonProfile name="Elle Groeneveld" jobTitle="Chair of Finance" imageSrc={elleImage} />
             </div>
             
             {/* Fourth row - 3 profiles */}
             <div style={{ display: "flex", gap: "40px" }}>
               <HexagonProfile name="Bryn Wright" jobTitle="Chair of Marketing and Communications" imageSrc={brynImage} />
-              <HexagonProfile name="Sohan Sadeque" jobTitle="Chair of Marketing and Communications" imageSrc={kadenImage} />
-              <HexagonProfile name="Asmita Jain" jobTitle="Chair of General Events" imageSrc={kadenImage} />
+              <HexagonProfile name="Sohan Sadeque" jobTitle="Chair of Marketing and Communications" imageSrc={sohanImage} />
+              <HexagonProfile name="Asmita Jain" jobTitle="Chair of General Events" imageSrc={asmitaImage} />
             </div>
             
             {/* Fifth row - 2 profiles */}
             <div style={{ display: "flex", gap: "40px" }}>
               <HexagonProfile name="Shirley Averbuch" jobTitle="Chair of Flagship Events" imageSrc={kadenImage} />
-              <HexagonProfile name="Geoffrey Keal" jobTitle="Chair of Flagship Events" imageSrc={kadenImage} />
+              <HexagonProfile name="Geoffrey Keal" jobTitle="Chair of Flagship Events" imageSrc={geoffImage} />
             </div>
           </div>
         </div>

@@ -33,11 +33,16 @@ export default function EventBox({ event }) {
       onClick={handleClick}
     >
       <div>
-        <h3 style={{ 
-          margin: "0 0 10px 0", 
-          fontSize: "1.2rem",
-          fontWeight: "bold"
-        }}>
+        <h3 
+          style={{
+            margin: "0 0 10px 0",
+            fontSize: "1.2rem",
+            fontWeight: "bold",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
+          }}
+        >
           {event.name}
         </h3>
         <p style={{ 
