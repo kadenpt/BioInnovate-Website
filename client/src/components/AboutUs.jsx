@@ -2,7 +2,6 @@ import React from 'react';
 import HexagonProfile from './HexagonProfile';
 
 import tomImage from '../../assets/tom.jpg';
-import kadenImage from '../../assets/placeholder.png';
 import taraImage from '../../assets/tara.jpg';
 import brynImage from '../../assets/bryn.jpg';
 import camImage from '../../assets/cam.jpg';
@@ -11,7 +10,7 @@ import sohanImage from '../../assets/sohan.jpg';
 import elleImage from '../../assets/elle.jpeg';
 import asmitaImage from '../../assets/asmita_jain.jpeg';
 import geoffImage from '../../assets/geoff.jpeg';
- // shirleyImage from '../../assets/shirley.jpg';
+import shirleyImage from '../../assets/shirley.jpeg';
 
 import homeBackground from '../../assets/homeBackground.JPG';
 import tempBackground from '../../assets/tempBackground.png';
@@ -171,7 +170,7 @@ export default function AboutUs() {
             
             {/* Fifth row - 2 profiles */}
             <div style={{ display: "flex", gap: "40px" }}>
-              <HexagonProfile name="Shirley Averbuch" jobTitle="Chair of Flagship Events" imageSrc={kadenImage} />
+              <HexagonProfile name="Shirley Averbuch" jobTitle="Chair of Flagship Events" imageSrc={shirleyImage} />
               <HexagonProfile name="Geoffrey Keal" jobTitle="Chair of Flagship Events" imageSrc={geoffImage} />
             </div>
           </div>
