@@ -1,14 +1,14 @@
 import React from 'react';
 import HexagonProfile from './HexagonProfile';
 
+import leoImage from '../../assets/leoYang.png';
 import tomImage from '../../assets/tom.jpg';
 import taraImage from '../../assets/tara.jpg';
-import brynImage from '../../assets/bryn.jpg';
+import marinImage from '../../assets/marinRiege.png';
 import camImage from '../../assets/cam.jpg';
 import ethanImage from '../../assets/ethan.jpg';
 import sohanImage from '../../assets/sohan.jpg';
 import elleImage from '../../assets/elle.jpeg';
-import asmitaImage from '../../assets/asmita_jain.jpeg';
 import geoffImage from '../../assets/geoff.jpeg';
 import shirleyImage from '../../assets/shirley.jpeg';
 
@@ -163,9 +163,9 @@ export default function AboutUs() {
             
             {/* Fourth row - 3 profiles */}
             <div style={{ display: "flex", gap: "40px" }}>
-              <HexagonProfile name="Bryn Wright" jobTitle="Chair of Marketing and Communications" imageSrc={brynImage} />
+              <HexagonProfile name="Leo Yang" jobTitle="Chair of Marketing and Communications" imageSrc={leoImage} />
               <HexagonProfile name="Sohan Sadeque" jobTitle="Chair of Marketing and Communications" imageSrc={sohanImage} />
-              <HexagonProfile name="Asmita Jain" jobTitle="Chair of General Events" imageSrc={asmitaImage} />
+              <HexagonProfile name="Marin Riege" jobTitle="Chair of Partnerships" imageSrc={marinImage} />
             </div>
             
             {/* Fifth row - 2 profiles */}
