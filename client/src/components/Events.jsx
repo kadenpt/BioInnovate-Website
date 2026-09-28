@@ -114,6 +114,9 @@ export default function Events() {
               {upcomingEvents.map((event) => (
                 <EventBox key={event._id} event={event} />
               ))}
+              {upcomingEvents.length === 0 && (
+                <div style={{ textAlign: 'center' }}>No scheduled events</div>
+              )}
             </div>
           )}
           

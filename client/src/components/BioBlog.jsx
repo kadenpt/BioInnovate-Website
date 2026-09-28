@@ -386,7 +386,7 @@ export default function BioBlog() {
 
                 {/* Page Info */}
                 {totalPages > 1 && (
-                  <div className="mt-4 text-center text-gray-600">
+                  <div className="mt-4 text-center text-white-600">
                     <p className="text-sm">
                       Showing {((currentPage - 1) * blogsPerPage) + 1} to {Math.min(currentPage * blogsPerPage, blogs.length)} of {blogs.length} blog posts
                     </p>

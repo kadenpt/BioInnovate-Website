@@ -305,7 +305,7 @@ export default function GetInvolved() {
                 marginBottom: "1.5rem",
                 lineHeight: "1.6"
               }}>
-                Use the button below to contact us via email for any questions or inquiries at bioinnovateubc@gmail.com.
+                Use the button below to contact us via email for any questions or inquiries at <a style={{ color: "#226897", textDecoration: "none" }} href="mailto:bioinnovateubc@gmail.com">bioinnovateubc@gmail.com</a>.
               </p>
               <button 
                 onClick={() => window.open('mailto:bioinnovateubc@gmail.com', '_blank')}
