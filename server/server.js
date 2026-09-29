@@ -29,6 +29,10 @@ app.use("/api/events", events);
 app.use("/api/emails", emails);
 app.use("/api/auth", auth);
 
+app.get("/health", (req, res) => {
+  res.status(200).json({ message: "Server is running" });
+});
+
 // start the Express server
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
