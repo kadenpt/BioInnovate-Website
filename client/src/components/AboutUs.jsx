@@ -2,13 +2,13 @@ import React from 'react';
 import HexagonProfile from './HexagonProfile';
 
 import leoImage from '../../assets/leoYang.png';
-import tomImage from '../../assets/tom.jpg';
-import taraImage from '../../assets/tara.jpg';
+import tomImage from '../../assets/tom.JPG';
+import taraImage from '../../assets/tara.JPG';
 import marinImage from '../../assets/marinRiege.png';
-import camImage from '../../assets/cam.jpg';
-import ethanImage from '../../assets/ethan.jpg';
+import camImage from '../../assets/cam.JPG';
+import ethanImage from '../../assets/ethan.JPG';
 import sohanImage from '../../assets/sohan.jpg';
-import elleImage from '../../assets/elle.jpeg';
+import elleImage from '../../assets/Elle.jpeg';
 import geoffImage from '../../assets/geoff.jpeg';
 import shirleyImage from '../../assets/shirley.jpeg';
 
