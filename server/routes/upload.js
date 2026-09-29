@@ -4,9 +4,7 @@ import cloudinary from "cloudinary";
 import path from "path";
 import { fileURLToPath } from "url";
 import fs from "fs";
-import dotenv from "dotenv";
-
-dotenv.config();
+import "../loadEnv.js";
 
 const router = express.Router();
 const __filename = fileURLToPath(import.meta.url);

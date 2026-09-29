@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { authHeaders } from '../services/api.js';
 
 export default function AdminLogin() {
   const [formData, setFormData] = useState({
@@ -30,6 +31,7 @@ export default function AdminLogin() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          ...authHeaders(),
         },
         body: JSON.stringify(formData),
       });

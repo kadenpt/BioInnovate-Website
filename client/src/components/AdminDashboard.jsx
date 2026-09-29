@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { blogAPI, eventAPI } from '../services/api.js';
+import { authHeaders, blogAPI, eventAPI } from '../services/api.js';
 
 export default function AdminDashboard() {
   const [activeTab, setActiveTab] = useState('blog');
@@ -136,6 +136,7 @@ export default function AdminDashboard() {
 
       const response = await fetch(`${import.meta.env.VITE_API_URL || 'http://localhost:5050'}/upload`, {
         method: 'POST',
+        headers: authHeaders(),
         body: formData,
       });
 

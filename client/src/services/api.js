@@ -1,13 +1,21 @@
 const BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5050';
 
+export const authHeaders = () => {
+  const token = import.meta.env.VITE_API_KEY;
+  if (!token) return {};
+  return { Authorization: `Bearer ${token}` };
+};
+
 const apiCall = async (endpoint, options = {}) => {
   const url = `${BASE_URL}/api${endpoint}`;
+  const { headers: optionHeaders, ...rest } = options;
   const response = await fetch(url, {
+    ...rest,
     headers: {
       'Content-Type': 'application/json',
-      ...options.headers,
+      ...authHeaders(),
+      ...optionHeaders,
     },
-    ...options,
   });
 
   if (!response.ok) {
